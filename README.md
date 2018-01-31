@@ -36,11 +36,11 @@ Output will be:
 
 As alternative, you can import functions from this script to use in your project:
 ```python
-load_data(file_path) # just loads data from text file.
+load_data(file_path) # just loads words from text file.
 ```
 
 ```python
-get_most_frequent_words(text) # returns list which contains words ordered from most frequent to least frequent with quantity.
+get_most_frequent_words(words_in_file) # returns list which contains words ordered from most frequent to least frequent with quantity.
 ```
 
 
