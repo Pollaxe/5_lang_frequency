@@ -43,6 +43,9 @@ load_data(file_path) # just loads words from text file.
 get_most_frequent_words(words_in_file) # returns list which contains words ordered from most frequent to least frequent with quantity.
 ```
 
+```python
+print_most_frequent_words(most_frequent_words) # outputs ten most frequent words to console.
+```
 
 # Project Goals
 

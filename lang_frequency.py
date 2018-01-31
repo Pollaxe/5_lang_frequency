@@ -13,14 +13,18 @@ def get_most_frequent_words(words_in_file):
     return most_frequent_words
 
 
+def print_most_frequent_words(most_frequent_words):
+    for word, qty in most_frequent_words:
+        print(word)
+
+
 if __name__ == '__main__':
+    file_path = sys.argv[1]
     try:
-        file_path = sys.argv[1]
         words_in_file = load_data(file_path)
     except FileNotFoundError:
         sys.exit('Файл не найден, попробуйте еще раз.')
     except IndexError:
         sys.exit('Используйте синтакс: "python lang_frequency.py <filename>"')
     most_frequent_words = get_most_frequent_words(words_in_file)
-    for word, qty in most_frequent_words:
-        print(word)
+    print_most_frequent_words(most_frequent_words)
