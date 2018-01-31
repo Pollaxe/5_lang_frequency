@@ -8,8 +8,9 @@ def load_data(file_path):
     return words_in_file
 
 
-def get_most_frequent_words(words_in_file):
-    most_frequent_words = Counter(words_in_file).most_common(10)
+def get_ten_most_frequent_words(words_in_file):
+    most_frequent_words_limit = 10
+    most_frequent_words = Counter(words_in_file).most_common(most_frequent_words_limit)
     return most_frequent_words
 
 
@@ -26,5 +27,5 @@ if __name__ == '__main__':
         sys.exit('Файл не найден, попробуйте еще раз.')
     except IndexError:
         sys.exit('Используйте синтакс: "python lang_frequency.py <filename>"')
-    most_frequent_words = get_most_frequent_words(words_in_file)
+    most_frequent_words = get_ten_most_frequent_words(words_in_file)
     print_most_frequent_words(most_frequent_words)
